@@ -5,7 +5,7 @@ class ControlCamera():
   def __init__(self):
 
     worlds = ue.all_worlds()
-    world = worlds[0]
+    world = worlds[1]
     controllers = ue.find_all_objects("PlayerController")
     controller = controllers[0]
 
@@ -14,10 +14,6 @@ class ControlCamera():
     self.Camera2 = self.CameraActors[1]
     print(self.Camera1)
     print(self.Camera2)
-    actors = world.all_actors()
-    for actor in actors:
-        print(actor.get_full_name())
-
     self.MyController = controller
 
     self._tick = ue.add_ticker(self.tickfunc, 3)
@@ -26,16 +22,16 @@ class ControlCamera():
     print("xxxx1")
     if (self.MyController):
         if self.Camera2 and self.Camera1:
-            current_modules = [name for name in dir(self.MyController)]
-            print("loaded modules", current_modules)
             if self.Camera2 and self.MyController.get_view_target(0) == self.Camera1:
                 print("xxxx3")
                 self.MyController.set_view_target_with_blend(self.Camera2, 0, 1) 
                 print("xxxx4")
             elif (self.Camera2):
+                print("xxxx5")
                 self.MyController.set_view_target_with_blend(self.Camera1, 0, 1)   
+                print("xxxx6")
         print("xxxx2") 
-        #self._tick = ue.add_ticker(self.tickfunc, 3)
+        self._tick = ue.add_ticker(self.tickfunc, 3)
     print("yyyy")
 
 
