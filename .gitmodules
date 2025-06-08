@@ -3,4 +3,4 @@
 	url = https://github.com/laoliu/UnrealEnginePython
 [submodule "Plugins/UnrealGenAISupport"]
 	path = Plugins/UnrealGenAISupport
-	url = https://github.com/prajwalshettydev/UnrealGenAISupport.git
+	url = https://github.com/laoliu/UnrealGenAISupport.git
