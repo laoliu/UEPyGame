@@ -10,13 +10,15 @@ class ControlCamera():
     controller = controllers[0]
 
     self.CameraActors = ue.find_all_objects("CameraActor")
+
     self.Camera1 = self.CameraActors[0]
     self.Camera2 = self.CameraActors[1]
+
     print(self.Camera1)
     print(self.Camera2)
     self.MyController = controller
-
-    self._tick = ue.add_ticker(self.tickfunc, 3)
+    #self._tick = ue.add_ticker(self.tickfunc, 3)
+    self.tickfunc(3)
 
   def tickfunc(self, d):
     print("xxxx1")
@@ -31,7 +33,7 @@ class ControlCamera():
                 self.MyController.set_view_target_with_blend(self.Camera1, 0, 1)   
                 print("xxxx6")
         print("xxxx2") 
-        self._tick = ue.add_ticker(self.tickfunc, 3)
+        #self._tick = ue.add_ticker(self.tickfunc, 3)
     print("yyyy")
 
 
