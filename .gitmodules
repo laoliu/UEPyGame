@@ -1,6 +1,6 @@
 [submodule "Plugins/UnrealEnginePython"]
 	path = Plugins/UnrealEnginePython
 	url = https://github.com/laoliu/UnrealEnginePython
-[submodule "Plugins/GenerativeAISupport"]
-	path = Plugins/GenerativeAISupport
+[submodule "Plugins/UnrealGenAISupport"]
+	path = Plugins/UnrealGenAISupport
 	url = https://github.com/laoliu/UnrealGenAISupport.git
