@@ -44,7 +44,7 @@ void UChatGptUtil::Chat(FString MessageContent, FString Key, FChatCallback ChatC
     HttpRequest->SetContentAsString(OutputString);
     HttpRequest->SetTimeout(120);
     // 流式接收在请求进度回调代理处理，非流式接收在请求完成回调代理处理
-    HttpRequest->OnRequestProgress().BindLambda([ChatCallback](FHttpRequestPtr Request, int32 BytesSent, int32 BytesReceived)
+    HttpRequest->OnRequestProgress64().BindLambda([ChatCallback](FHttpRequestPtr Request, int32 BytesSent, int32 BytesReceived)
         {
             const FHttpResponsePtr Response = Request->GetResponse();
             if (!Response.IsValid())
