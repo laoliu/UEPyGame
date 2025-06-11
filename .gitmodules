@@ -3,5 +3,5 @@
 	url = https://github.com/laoliu/UnrealGenAISupport.git
 	
 [submodule "Plugins/PythonPluginNew"]
-	path = Plugins/ScriptPluginNew
+	path = Plugins/PythonPluginNew
 	url = https://github.com/laoliu/PythonScriptPlugin.git
