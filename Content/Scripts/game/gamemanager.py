@@ -1,6 +1,6 @@
 import random
 from unreal_engine.classes import Actor
-import unreal_engine as ue
+import unreal as ue
 from letteractor import LetterActor
 
 class GameManager(Actor):
